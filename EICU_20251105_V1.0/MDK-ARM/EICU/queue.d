@@ -1,0 +1,10 @@
+eicu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+eicu\queue.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stdlib.h
+eicu\queue.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\string.h
+eicu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+eicu\queue.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stddef.h
+eicu\queue.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stdint.h
+eicu\queue.o: ../Core/Inc/FreeRTOSConfig.h
+eicu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+eicu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+eicu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h

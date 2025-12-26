@@ -1,0 +1,12 @@
+cir_phone_20250717\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+cir_phone_20250717\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+cir_phone_20250717\port.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stddef.h
+cir_phone_20250717\port.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stdint.h
+cir_phone_20250717\port.o: ../Core/Inc/FreeRTOSConfig.h
+cir_phone_20250717\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+cir_phone_20250717\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+cir_phone_20250717\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+cir_phone_20250717\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+cir_phone_20250717\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+cir_phone_20250717\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+cir_phone_20250717\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

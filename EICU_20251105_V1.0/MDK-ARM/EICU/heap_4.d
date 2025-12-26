@@ -1,0 +1,9 @@
+eicu\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+eicu\heap_4.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stdlib.h
+eicu\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+eicu\heap_4.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stddef.h
+eicu\heap_4.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stdint.h
+eicu\heap_4.o: ../Core/Inc/FreeRTOSConfig.h
+eicu\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+eicu\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+eicu\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h

@@ -1,0 +1,9 @@
+eicu\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
+eicu\event_groups.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stdlib.h
+eicu\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+eicu\event_groups.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stddef.h
+eicu\event_groups.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stdint.h
+eicu\event_groups.o: ../Core/Inc/FreeRTOSConfig.h
+eicu\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+eicu\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+eicu\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h

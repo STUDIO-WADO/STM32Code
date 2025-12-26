@@ -1,0 +1,9 @@
+eicu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+eicu\stream_buffer.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stdint.h
+eicu\stream_buffer.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\string.h
+eicu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+eicu\stream_buffer.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stddef.h
+eicu\stream_buffer.o: ../Core/Inc/FreeRTOSConfig.h
+eicu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+eicu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+eicu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h

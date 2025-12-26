@@ -1,0 +1,10 @@
+eicu\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
+eicu\cmsis_os.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\string.h
+eicu\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+eicu\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+eicu\cmsis_os.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stddef.h
+eicu\cmsis_os.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stdint.h
+eicu\cmsis_os.o: ../Core/Inc/FreeRTOSConfig.h
+eicu\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+eicu\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+eicu\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h

@@ -1,0 +1,13 @@
+cir_phone_20250717\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+cir_phone_20250717\heap_4.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stdlib.h
+cir_phone_20250717\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+cir_phone_20250717\heap_4.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stddef.h
+cir_phone_20250717\heap_4.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stdint.h
+cir_phone_20250717\heap_4.o: ../Core/Inc/FreeRTOSConfig.h
+cir_phone_20250717\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+cir_phone_20250717\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+cir_phone_20250717\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+cir_phone_20250717\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+cir_phone_20250717\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+cir_phone_20250717\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+cir_phone_20250717\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

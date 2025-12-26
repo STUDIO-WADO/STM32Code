@@ -1,0 +1,9 @@
+eicu\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+eicu\list.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stdlib.h
+eicu\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+eicu\list.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stddef.h
+eicu\list.o: E:\Software\MDK5.36\ARM\ARMCC\Bin\..\include\stdint.h
+eicu\list.o: ../Core/Inc/FreeRTOSConfig.h
+eicu\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+eicu\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+eicu\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
