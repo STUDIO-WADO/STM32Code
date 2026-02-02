@@ -1,0 +1,21 @@
+Log at : 2026/1/23|10:56:11|GMT+0800
+
+Log at : 2026/1/23|10:56:15|GMT+0800
+
+Log at : 2026/1/28|09:49:17|GMT+0800
+
+[SyntaxError: Unexpected end of JSON input
+	at JSON.parse (<anonymous>)
+	at I.updateCppProperties (c:\Users\Admin\.vscode\extensions\cl.keil-assistant-1.6.2\dist\extension.js:1:9859)
+	at I.<anonymous> (c:\Users\Admin\.vscode\extensions\cl.keil-assistant-1.6.2\dist\extension.js:1:11430)
+	at Generator.next (<anonymous>)
+	at c:\Users\Admin\.vscode\extensions\cl.keil-assistant-1.6.2\dist\extension.js:1:4480
+	at new Promise (<anonymous>)
+	at r (c:\Users\Admin\.vscode\extensions\cl.keil-assistant-1.6.2\dist\extension.js:1:4225)
+	at I.load (c:\Users\Admin\.vscode\extensions\cl.keil-assistant-1.6.2\dist\extension.js:1:10320)
+	at x.<anonymous> (c:\Users\Admin\.vscode\extensions\cl.keil-assistant-1.6.2\dist\extension.js:1:8120)
+	at Generator.next (<anonymous>)
+	at a (c:\Users\Admin\.vscode\extensions\cl.keil-assistant-1.6.2\dist\extension.js:1:4282)
+	at process.processTicksAndRejections (node:internal/process/task_queues:105:5)]
+Log at : 2026/1/28|16:43:09|GMT+0800
+
