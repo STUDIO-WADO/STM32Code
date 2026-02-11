@@ -18,21 +18,30 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
 #include "dma.h"
 #include "spi.h"
+#include "tim.h"
 #include "gpio.h"
-#include "adc.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "key.h"
 #include "st7735.h"
 #include "lcd_test.h"
 #include "pic.h"
+
+#include "hw_led.h"
+#include "hw_key.h"
+#include "hw_ec11.h"
+
+#include "mid_timer.h"
+
+#include "osc_task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-extern float adc_voltage;
+// extern float adc_voltage;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -60,6 +69,7 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+//static struct key_class key_handle[4];
 /* USER CODE END 0 */
 
 /**
@@ -70,7 +80,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+//  uint16_t adc_vref_value = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -93,14 +103,34 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_SPI1_Init();
-  /* USER CODE BEGIN 2 */
   MX_ADC1_Init();
-  LCD_Init();
-  LCD_Fill(0,0,LCD_W,LCD_H,WHITE);
+  MX_TIM2_Init();
+  MX_TIM4_Init();
+  MX_TIM3_Init();
+  /* USER CODE BEGIN 2 */
   
+  //========================初始化====================================//
+
+  //adc_vref_value = Get_ADC_Average(200);
+
+  hw_led_init();
+  hw_key_init();
+  hw_ec11_init();
+
+  LCD_Init();
+  ic_tim3_start();
+  tim4_start();
+
+  //=================================================================//
+  
+  LCD_Fill(0,0,160,128,BLACK);
+  TFT_StaticUI();
+  HAL_TIM_Base_Start_IT(&htim2);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
   //==============================================================//
-  LCD_ShowChinese(0,0,"���ӿƼ�",BLUE,WHITE,16,0);
+  //LCD_ShowChinese(0,0,"KY",BLUE,WHITE,16,0);
   //LCD_ShowPicture(39,55,50,50,gImage_esrth50x50);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -117,15 +147,50 @@ int main(void)
 //    LCD_ShowIntNum(72,50,LCD_H,3,RED,WHITE,16);
 //    LCD_ShowFloatNum1(20,80,t,4,RED,WHITE,16);
 //    t+=0.11;
-//    LCD_ShowPicture(65,80,40,40,gImage_kaiyan);  
-//      LCD_ShowPicture(0,30,64,17,gImage_64_17_kaiyan);
-    Key_Handler();
+
       
+    //key    
+//    key_scanf(&key_handle[key1]);    
+//    key_scanf(&key_handle[key2]);
+//    key_scanf(&key_handle[key3]);      
+
+    //LED
+    //led_toggle(&led_handle[led1]);
+    
     //ADC
-    LCD_ShowFloatNum1(0,20,adc_voltage,4,RED,WHITE,16);
-    HAL_Delay(1000);  
+    //LCD_ShowFloatNum1(0,20,adc_voltage,4,RED,BLACK,16);
 
+    //KEY
+//    if(key_handle[key1].key_state == KeyPress)
+//    {
+//        led_toggle(&led_handle[led1]);  // 单击翻转LED1
+//        key_handle[key1].key_state = KEY_NoPress;  // 清除状态
+//    }
+//    else if(key_handle[key1].key_state == KeyDoublePress)
+//    {
+//        led_turn_on(&led_handle[led2]);  // 双击点亮
+//        key_handle[key1].key_state = KEY_NoPress;
+//    }
+//    else if(key_handle[key1].key_state == KeyLongPress)
+//    {
+//        led_turn_off(&led_handle[led2]);  // 长按熄灭
+//        key_handle[key1].key_state = KEY_NoPress;
+//    }
+     //EC11
+    // if(ec11_handle.ec11_direction == ec11_reversal)
+    // {
+    //     led_toggle(&led_handle[led1]);  // 反转LED1
+    // } 
+    // else if(ec11_handle.ec11_direction == ec11_forward)
+    // {
+    //     led_toggle(&led_handle[led2]);  // 正转LED2
+    // }
 
+    //输入捕获
+    //PWM
+    //pwm_test();
+    //HAL_Delay(500);
+    
   }
   /* USER CODE END 3 */
 }
@@ -138,6 +203,7 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
@@ -164,6 +230,12 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+  PeriphClkInit.AdcClockSelection = RCC_ADCPCLK2_DIV6;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
   }

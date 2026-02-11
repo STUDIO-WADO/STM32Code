@@ -10,6 +10,9 @@
                 "f:\\嵌入式\\简易示波器\\Drivers\\CMSIS\\Include",
                 "f:\\嵌入式\\简易示波器\\Drivers\\BSP",
                 "E:\\Software\\Keil_v5\\ARM\\ARMCC\\include",
+                "f:\\嵌入式\\简易示波器\\Hardware",
+                "f:\\嵌入式\\简易示波器\\Middle",
+                "f:\\嵌入式\\简易示波器\\APP",
                 "f:\\嵌入式\\简易示波器\\MDK-ARM",
                 "f:\\嵌入式\\简易示波器\\Core\\Src",
                 "f:\\嵌入式\\简易示波器\\Drivers\\STM32F1xx_HAL_Driver\\Src"

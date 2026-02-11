@@ -73,7 +73,7 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : EC11_A_Pin */
   GPIO_InitStruct.Pin = EC11_A_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(EC11_A_GPIO_Port, &GPIO_InitStruct);
 
@@ -85,46 +85,11 @@ void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI4_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(EXTI4_IRQn, 3, 0);
   HAL_NVIC_EnableIRQ(EXTI4_IRQn);
 
 }
 
 /* USER CODE BEGIN 2 */
-// 全局变量
-volatile uint8_t A_cnt = 0;
-volatile uint8_t B_value = 0;
 
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-  if(GPIO_Pin == EC11_A_Pin)
-  {
-    if((HAL_GPIO_ReadPin(EC11_A_GPIO_Port, EC11_A_Pin) == GPIO_PIN_RESET) && (A_cnt == 0))
-    {
-      A_cnt++;
-      B_value = 0;
-      if(HAL_GPIO_ReadPin(EC11_B_GPIO_Port, EC11_B_Pin) == GPIO_PIN_SET)
-      {
-        B_value = 1;
-      }
-    }
-    else if((HAL_GPIO_ReadPin(EC11_A_GPIO_Port, EC11_A_Pin) == GPIO_PIN_SET) && (A_cnt == 1))
-    {
-      A_cnt = 0;
-      if((B_value == 1) && (HAL_GPIO_ReadPin(EC11_B_GPIO_Port, EC11_B_Pin) == GPIO_PIN_RESET))
-      {
-        // 顺时针
-        LED2_Open();
-        LED3_Close();
-      }
-      if((B_value == 0) && (HAL_GPIO_ReadPin(EC11_B_GPIO_Port, EC11_B_Pin) == GPIO_PIN_SET))
-      {
-        // 逆时针
-        LED2_Close();
-        LED3_Open();
-      }
-    }
-
-  }
-}
 /* USER CODE END 2 */
